@@ -22,7 +22,7 @@ course TA.
 
 # Installing Agda
 
-There is a multitude of ways of obtaining
+There is a multitude of ways of obtaining and installing
 [Agda](https://wiki.portal.chalmers.se/agda/pmwiki.php).
 We list some of the most common and simplest below.
 
@@ -50,6 +50,7 @@ that you get is either 2.6.2 or 2.6.2.1, i.e., the newest available
 at the time of writing these instructions. As said above, using an
 older version (which can be common in the case of pre-built binaries)
 will likely lead to errors when typechecking a newer standard library.
+
 For instance, the Windows binary linked in the above instructions is
 for version 2.6.0.1, which is roughly two years old and out of date
 
@@ -95,15 +96,14 @@ The course textbook has
 [instructions](https://plfa.github.io/GettingStarted/#install-agda-using-stack)
 on how to install Agda using the Haskell Tool Stack.
 
-At this point, for this installation method, you need to only follow
-the first sections of the above instructions, from "Install the
-Haskell Tool Stack" to "Install Agda using Stack", but make sure to
-replace `git checkout v2.6.1.3` with `git checkout v2.6.2.1` in
-the instructions linked above to install Agda version 2.6.2.1.
+For our course, you need to only follow the first sections of the
+above instructions, from "Install the Haskell Tool Stack" to "Install
+Agda using Stack", but make sure to replace `git checkout v2.6.1.3`
+with `git checkout v2.6.2.1` to install Agda version 2.6.2.1.
 
 You do not need to follow the instructions for installing the standard
 library as this is already packaged with the course materials, as
-explained later below.
+explained [below](#getting-the-course-materials).
 
 # Interacting with Agda
 
@@ -164,12 +164,12 @@ need to keep your fork of this repository up to date with the changes
 and updates we make. This can be easiest done by following these
 [instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
 
-Note: We suggest as a best practice that you develop your solutions to
-the exercises in a branch different from the fork's `main` branch so
-as to avoid merge conflicts when pulling in our updates. After
-fetching the upstream updates from the repository (as in the
-instructions above), you can merge them into your working branch by
-simply executing the following commands:
+**Note:** We suggest as a best practice that you develop your
+solutions to the exercises in a branch different from the fork's
+`main` branch so as to avoid merge conflicts when pulling in our
+updates. After fetching the upstream updates from the repository
+(as explained in the instructions above), you can merge them into
+your working branch by simply executing the following commands:
 
 ```
 git checkout your_working_branch_name
@@ -187,7 +187,7 @@ managing branches.
 
 For general help with Git related problems, you can consult GitHub's
 [help pages](https://training.github.com/downloads/github-git-cheat-sheet/),
-chat to your classmates, or ask the course TA for help.
+chat to other students taking the course, or ask the course TA for help.
 
 # Checking that everything works
 
