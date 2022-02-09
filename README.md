@@ -5,7 +5,7 @@ This repository contains the course materials for the course
 (exercises, sample solutions, code, etc). The repository will be
 continuously updated and added to as the course progresses.
 
-Note: This code has been checked to work with Agda version 2.6.2
+**Note:** This code has been checked to work with Agda version 2.6.2
 and 2.6.2.1. Using an older version of Agda will likely result in
 errors when typechecking the imported standard library modules.
 
@@ -41,7 +41,7 @@ If your computer architecture and operating system are supported, then
 the simplest way to optain Agda is via one of the
 [pre-built binaries](https://agda.readthedocs.io/en/v2.6.2.1/getting-started/installation.html#prebuilt-packages-and-system-specific-instructions).
 
-Note: If using a pre-built binary, make sure that the version of Agda
+**Note:** If using a pre-built binary, make sure that the version of Agda
 that you get is either 2.6.2 or 2.6.2.1, i.e., the newest available
 at the time of writing these instructions. As said above, using an
 older version (which can be common in the case of pre-built binaries)
@@ -62,7 +62,7 @@ After enabling the Agda Language Server and restaring VS Code, the
 `agda-mode` extension will download the Agda Language Server the next
 time you attempt to typecheck an Agda file.
 
-Note: As the Agda Language Server is a new and experimental feature,
+**Note:** As the Agda Language Server is a new and experimental feature,
 it can sometimes misbehave on some computers or operating systems (such
 as typechecking an Agda file hanging with a `Loading ...` message).
 
