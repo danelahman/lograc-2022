@@ -42,7 +42,7 @@ project work outside of the prescribed exercise class times.
 ## Pre-built binaries for specific platforms
 
 If your computer architecture and operating system are supported, then
-the simplest way to optain Agda is via one of the
+the simplest way to obtain Agda is via one of the
 [pre-built binaries](https://agda.readthedocs.io/en/latest/getting-started/installation.html#prebuilt-packages-and-system-specific-instructions).
 
 **Note:** If using a pre-built binary, make sure that the version of Agda
@@ -64,7 +64,7 @@ Code](https://code.visualstudio.com) (VS Code), install the
 VS Code extension, and instruct VS Code to use the (experimental) Agda
 Language Server (see the previous link for instructions to set this up).
 
-After enabling the Agda Language Server and restaring VS Code, the
+After enabling the Agda Language Server and restarting VS Code, the
 `agda-mode` extension will download the Agda Language Server the next
 time you attempt to typecheck an Agda file.
 
@@ -117,7 +117,7 @@ preferred ways of doing this is by using either
   [agda-mode](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html)
   plugin
 
-The Agda modes for both of these code editors are rougly equal in the
+The Agda modes for both of these code editors are roughly equal in the
 features that they support, so which one you will use will come down
 to your personal preference and any prior experience with these
 editors. If you do not have prior experience with Emacs, we recommend
@@ -176,7 +176,9 @@ git checkout your_working_branch_name
 git merge main
 ```
 
-See [these](https://www.atlassian.com/git/tutorials/using-branches) and
+See [these](https://www.atlassian.com/git/tutorials/using-branches),
+[these](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)
+and
 [these](https://www.atlassian.com/git/tutorials/using-branches/git-merge)
 instructions for basic information about creating, merging, and
 managing branches.
