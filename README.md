@@ -8,6 +8,8 @@ continuously updated and added to as the course progresses.
 **Note:** This code has been checked to work with Agda version 2.6.2
 and 2.6.2.1. Using an older version of Agda will likely result in
 errors when typechecking the imported standard library modules.
+When installing Agda using one of the methods described below,
+make sure you install Agda version 2.6.2 or 2.6.2.1.
 
 Below are instructions on
 - [How to install Agda](#installing-agda)
