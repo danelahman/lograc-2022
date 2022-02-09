@@ -20,8 +20,8 @@ course TA.
 # Installing Agda
 
 There is a multitude of ways of obtaining
-[Agda](https://wiki.portal.chalmers.se/agda/pmwiki.php). We list some
-of the most common and simplest below.
+[Agda](https://wiki.portal.chalmers.se/agda/pmwiki.php).
+We list some of the most common and simplest below.
 
 ## Pre-installed Agda in the computer classes
 
@@ -47,7 +47,8 @@ at the time of writing these instructions. As said above, using an
 older version (which can be common in the case of pre-built binaries)
 will likely lead to errors when typechecking a newer standard library.
 
-You can check the Agda version by running `agda --version`.
+You can check your Agda version by running `agda --version` from
+command line.
 
 ## Visual Studio Code and the Agda Language Server
 
@@ -95,11 +96,12 @@ above instructions is to first download and install
 For the best Agda user experience, you should be using it through an
 Interactive Development Environments. The two most common and
 preferred ways of doing this is by using either
-- VS Code and its
-[agda-mode](https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode)
-extension, or
+- [VS Code](https://code.visualstudio.com) and its
+  [agda-mode](https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode)
+  extension, or
 - [Emacs](https://www.gnu.org/software/emacs/) its
-[agda-mode](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html)
+  [agda-mode](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html)
+  plugin
 
 The Agda modes for both of these code editors are rougly equal in the
 features that they support, so which one you will use will come down
@@ -109,9 +111,10 @@ starting with VS Code as you have likely used it in your past courses.
 
 Most of the interaction with Agda when solving exercises, writing code,
 and proving theorems happens via keyboard shortcuts. Depending on which
-editor you chose to use, see the above links for cheat sheets of these
-keyboard shortcuts. We will introduce the most important ones and train
-them into your fingers during the first lectures and exercises.
+editor you chose to use, see the above links for lists of these shortcuts.
+
+We will of course introduce the most important keyboard shortcuts and
+train them into your fingers during the first lectures and exercises.
 
 # Getting the course materials
 
