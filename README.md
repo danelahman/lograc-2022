@@ -9,10 +9,19 @@ Note: This code has been checked to work with Agda version 2.6.2
 and 2.6.2.1. Using an older version of Agda will likely result in
 errors when typechecking the imported standard library modules.
 
+Below are instructions on
+- [How to install Agda](#installing-agda)
+- [How to interact with Agda](#interacting-with-agda)
+- [How to get the course materials](#getting-the-course-materials)
+
+In case of any questions about these instructions, please contact the
+course TA.
+
 # Installing Agda
 
 There is a multitude of ways of obtaining
-[Agda](https://wiki.portal.chalmers.se/agda/pmwiki.php), e.g.,
+[Agda](https://wiki.portal.chalmers.se/agda/pmwiki.php). We list some
+of the most common and simplest below.
 
 ## Pre-installed Agda in the computer classes
 
@@ -35,18 +44,18 @@ the simplest way to optain Agda is via one of the
 Note: If using a pre-built binary, make sure that the version of Agda
 that you get is either 2.6.2 or 2.6.2.1, i.e., the newest available
 at the time of writing these instructions. As said above, using an
-older version (which is common in the case of pre-built binaries)
+older version (which can be common in the case of pre-built binaries)
 will likely lead to errors when typechecking a newer standard library.
 
 You can check the Agda version by running `agda --version`.
 
 ## Visual Studio Code and the Agda Language Server
 
-The other simplest way to get going with Agda is to use Visual Studio
-Code (VS Code), install the
+The other simplest way to get going with Agda is to use [Visual Studio
+Code](https://code.visualstudio.com) (VS Code), install the
 [agda-mode](https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode)
 VS Code extension, and instruct VS Code to use the (experimental) Agda
-Language Server (see the previous link for installation instructions).
+Language Server (see the previous link for instructions to set this up).
 
 After enabling the Agda Language Server and restaring VS Code, the
 `agda-mode` extension will download the Agda Language Server the next
@@ -71,19 +80,38 @@ Haskell Tool Stack" to "Install Agda using Stack". You do not need to
 follow the instructions for installing the standard library as this is
 already packaged with the course materials, as discussed later.
 
-
 ## Installing Agda using Cabal (the Agda user manual method)
 
 The Agda user manual has
 [instructions](https://agda.readthedocs.io/en/v2.6.2.1/getting-started/installation.html#using-cabal)
 how to install Agda using Cabal (a package manager for Haskell).
 
-A simple way to get Cabal and all the listed prerequisites
-is to download and install [Haskell Platform](https://www.haskell.org/downloads/).
+A simple way to get Cabal and all the prerequisites listed in the
+above instructions is to first download and install
+[Haskell Platform](https://www.haskell.org/downloads/).
 
 # Interacting with Agda
 
-...
+For the best Agda user experience, you should be using it through an
+Interactive Development Environments. The two most common and
+preferred ways of doing this is by using either
+- VS Code and its
+[agda-mode](https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode)
+extension, or
+- [Emacs](https://www.gnu.org/software/emacs/) its
+[agda-mode](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html)
+
+The Agda modes for both of these code editors are rougly equal in the
+features that they support, so which one you will use will come down
+to your personal preference and any prior experience with these
+editors. If you do not have prior experience with Emacs, we recommend
+starting with VS Code as you have likely used it in your past courses.
+
+Most of the interaction with Agda when solving exercises, writing code,
+and proving theorems happens via keyboard shortcuts. Depending on which
+editor you chose to use, see the above links for cheat sheets of these
+keyboard shortcuts. We will introduce the most important ones and train
+them into your fingers during the first lectures and exercises.
 
 # Getting the course materials
 
@@ -134,6 +162,8 @@ chat to your classmates, or ask the course TA for help.
 # Checking that everything works
 
 Finally, in order to check that the standard library is set up as
-intended, try to typecheck the file `exercises/Test.agda` with Agda.
+intended, try to typecheck the file `exercises/Test.agda` with Agda
+by opening this file up in the editor of your choice (see above) and
+using the `C-c C-l` command to load/typecheck the `Test.agda` file.
 
 
