@@ -6,10 +6,11 @@ This repository contains the course materials for the course
 continuously updated and added to as the course progresses.
 
 **Note:** This code has been checked to work with Agda version 2.6.2
-and 2.6.2.1. Using an older version of Agda will likely result in
-errors when typechecking the imported standard library modules.  Thus,
-when installing Agda using one of the methods described below, make
-sure you install Agda version 2.6.2 or 2.6.2.1.
+and 2.6.2.1, and Agda standard library version 1.7.1. Using an older
+version of Agda or a different standard library version will likely
+result in errors when typechecking the imported standard library
+modules. Thus, when obtaining Agda using one of the methods described
+below, make sure you end up installing Agda version 2.6.2 or 2.6.2.1.
 
 Below are instructions on
 - [How to install Agda](#installing-agda)
@@ -49,6 +50,8 @@ that you get is either 2.6.2 or 2.6.2.1, i.e., the newest available
 at the time of writing these instructions. As said above, using an
 older version (which can be common in the case of pre-built binaries)
 will likely lead to errors when typechecking a newer standard library.
+For instance, the Windows binary linked in the above instructions is
+for version 2.6.0.1, which is roughly two years old and out of date
 
 You can check your Agda version by running `agda --version` from
 command line.
@@ -72,18 +75,6 @@ as typechecking an Agda file hanging with a `Loading ...` message).
 If you have problems with the Agda Language Server or if you prefer a
 separately installed Agda on your computer, see the next sections.
 
-## Installing Agda using the Haskell Tool Stack (the course textbook method)
-
-The course textbook has
-[instructions](https://plfa.github.io/GettingStarted/#install-agda-using-stack)
-on how to install Agda using the Haskell Tool Stack.
-
-At this point, for this installation method, you need to only follow
-the first sections of the above instructions, from "Install the
-Haskell Tool Stack" to "Install Agda using Stack". You do not need to
-follow the instructions for installing the standard library as this is
-already packaged with the course materials, as discussed later.
-
 ## Installing Agda using Cabal (the Agda user manual method)
 
 The Agda user manual has
@@ -94,10 +85,30 @@ A simple way to get Cabal and all the prerequisites listed in the
 above instructions is to first download and install
 [Haskell Platform](https://www.haskell.org/downloads/).
 
+In order to ensure you install Agda version 2.6.2.1, replace the
+command `cabal install Agda` with `cabal install Agda-2.6.2.1` in the
+instructions linked above.
+
+## Installing Agda using the Haskell Tool Stack (the course textbook method)
+
+The course textbook has
+[instructions](https://plfa.github.io/GettingStarted/#install-agda-using-stack)
+on how to install Agda using the Haskell Tool Stack.
+
+At this point, for this installation method, you need to only follow
+the first sections of the above instructions, from "Install the
+Haskell Tool Stack" to "Install Agda using Stack", but make sure to
+replace `git checkout v2.6.1.3` with `git checkout v2.6.2.1` in
+the instructions linked above to install Agda version 2.6.2.1.
+
+You do not need to follow the instructions for installing the standard
+library as this is already packaged with the course materials, as
+explained later below.
+
 # Interacting with Agda
 
 For the best Agda user experience, you should be using it through an
-Interactive Development Environments. The two most common and
+Interactive Development Environment. The two most common and
 preferred ways of doing this is by using either
 - [VS Code](https://code.visualstudio.com) and its
   [agda-mode](https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode)
@@ -153,11 +164,22 @@ need to keep your fork of this repository up to date with the changes
 and updates we make. This can be easiest done by following these
 [instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
 
-Note: We suggest as the best practice that you develop your solutions
-to the exercises in a branch different from the fork's `main` branch
-so as to avoid merge conflicts when pulling in our updates. See these
-[instructions](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
-for basic information about creating, merging, and managing branches.
+Note: We suggest as a best practice that you develop your solutions to
+the exercises in a branch different from the fork's `main` branch so
+as to avoid merge conflicts when pulling in our updates. After
+fetching the upstream updates from the repository (as in the
+instructions above), you can merge them into your working branch by
+simply executing the following commands:
+
+```
+git checkout your_working_branch_name
+git merge main
+```
+
+See [these](https://www.atlassian.com/git/tutorials/using-branches) and
+[these](https://www.atlassian.com/git/tutorials/using-branches/git-merge)
+instructions for basic information about creating, merging, and
+managing branches.
 
 ## General help regarding Git
 
