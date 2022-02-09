@@ -8,9 +8,10 @@ continuously updated and added to as the course progresses.
 **Note:** This code has been checked to work with Agda version 2.6.2
 and 2.6.2.1, and Agda standard library version 1.7.1. Using an older
 version of Agda or a different standard library version will likely
-result in errors when typechecking the imported standard library
-modules. Thus, when obtaining Agda using one of the methods described
-below, make sure you end up installing Agda version 2.6.2 or 2.6.2.1.
+result in errors when typechecking the exercises and the imported
+standard library modules. Thus, when obtaining Agda using one of the
+methods described below, make sure you install Agda version 2.6.2
+or 2.6.2.1.
 
 Below are instructions on
 - [How to install Agda](#installing-agda)
@@ -108,7 +109,7 @@ explained [below](#getting-the-course-materials).
 # Interacting with Agda
 
 For the best Agda user experience, you should be using it through an
-Interactive Development Environment. The two most common and
+interactive development environment. The two most common and
 preferred ways of doing this is by using either
 - [VS Code](https://code.visualstudio.com) and its
   [agda-mode](https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode)
@@ -191,9 +192,8 @@ chat to other students taking the course, or ask the course TA for help.
 
 # Checking that everything works
 
-Finally, in order to check that the standard library is set up as
-intended, try to typecheck the file `exercises/Test.agda` with Agda
-by opening this file up in the editor of your choice (see above) and
-using the `C-c C-l` command to load/typecheck the `Test.agda` file.
-
+Finally, in order to check that Agda, the standard library, and the
+interactive development environment are set up as intended, open the
+file `exercises/Test.agda` in the editor of your choice (see above)
+and use the `C-c C-l` command to load/typecheck the file.
 
