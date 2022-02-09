@@ -1,2 +1,7 @@
+# MacOS specific
+.DS_Store
+
+# Agda specific
 *.agdai
 MAlonzo/**
+_build/

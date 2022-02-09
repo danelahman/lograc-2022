@@ -1,0 +1,4 @@
+name: lograc
+include:
+  agda-stdlib/src
+  exercises
