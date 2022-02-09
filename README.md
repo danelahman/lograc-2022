@@ -7,9 +7,9 @@ continuously updated and added to as the course progresses.
 
 **Note:** This code has been checked to work with Agda version 2.6.2
 and 2.6.2.1. Using an older version of Agda will likely result in
-errors when typechecking the imported standard library modules.
-When installing Agda using one of the methods described below,
-make sure you install Agda version 2.6.2 or 2.6.2.1.
+errors when typechecking the imported standard library modules.  Thus,
+when installing Agda using one of the methods described below, make
+sure you install Agda version 2.6.2 or 2.6.2.1.
 
 Below are instructions on
 - [How to install Agda](#installing-agda)
@@ -28,8 +28,9 @@ We list some of the most common and simplest below.
 ## Pre-installed Agda in the computer classes
 
 While Agda has been pre-installed on the computers in the computer
-class, the centrally installed version of Agda might be out of
-date with respect to the version of standard library we use.
+class, the centrally installed version of Agda might be out of date
+with respect to the version of standard library we include in these
+course materials.
 
 **Therefore we strongly recommend that, if possible, you work on
 the exercises on your own laptop/computer using one of the ways of
@@ -41,7 +42,7 @@ project work outside of the prescribed exercise class times.
 
 If your computer architecture and operating system are supported, then
 the simplest way to optain Agda is via one of the
-[pre-built binaries](https://agda.readthedocs.io/en/v2.6.2.1/getting-started/installation.html#prebuilt-packages-and-system-specific-instructions).
+[pre-built binaries](https://agda.readthedocs.io/en/latest/getting-started/installation.html#prebuilt-packages-and-system-specific-instructions).
 
 **Note:** If using a pre-built binary, make sure that the version of Agda
 that you get is either 2.6.2 or 2.6.2.1, i.e., the newest available
@@ -86,7 +87,7 @@ already packaged with the course materials, as discussed later.
 ## Installing Agda using Cabal (the Agda user manual method)
 
 The Agda user manual has
-[instructions](https://agda.readthedocs.io/en/v2.6.2.1/getting-started/installation.html#using-cabal)
+[instructions](https://agda.readthedocs.io/en/latest/getting-started/installation.html#using-cabal)
 how to install Agda using Cabal (a package manager for Haskell).
 
 A simple way to get Cabal and all the prerequisites listed in the
