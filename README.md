@@ -133,6 +133,9 @@ starting with VS Code as you have likely used it in your past courses.
 The classroom computers have both VS Code and Emacs installed. For the
 former code editor you need to manually install the corresponding
 agda-mode extension; the latter has its agda-mode plugin pre-installed.
+However, as noted above, the version of Agda pre-installed on these
+computers is out of date, and thus we recommend that you install
+up to date Agda and the code editor of your choice on your own computer.
 
 **Note 1:** Most of the interaction with Agda happens via keyboard
 shortcuts. Depending on which editor you chose to use, see the above
@@ -207,8 +210,8 @@ As a best practice, we suggest that you develop your
 solutions to the exercises in a branch different from your fork's
 `main` branch. To this end, after cloning your fork to your computer,
 you can create a new branch based on the `main` branch and switch to
-using it by running the following commands (when using Git from the
-command line):
+using it by running the following commands in the root directory
+of your local clone of the fork (when using Git from the command line):
 
 ```
 git checkout main
