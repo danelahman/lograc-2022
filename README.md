@@ -134,14 +134,17 @@ The classroom computers have both VS Code and Emacs installed. For the
 former code editor you need to manually install the corresponding
 agda-mode extension; the latter has its agda-mode plugin pre-installed.
 
-Most of the interaction with Agda happens via keyboard
+**Note 1:** Most of the interaction with Agda happens via keyboard
 shortcuts. Depending on which editor you chose to use, see the above
 agda-mode links for lists of these shortcuts (and minor differences
 between the two editors). We will of course introduce the most
 important keyboard shortcuts and train them into your fingers during
-the first lectures and exercises.
+the first lectures and exercises. For example, to load/typecheck an
+Agda file, one would use the `C-c C-l` command (to be read as pressing
+the `Ctrl` and `c` keys simultaneously, followed by pressing `Ctrl`
+and `l` simultaneously).
 
-**Note 1:** In both of these agda-modes it is possible to input unicode
+**Note 2:** In both of these agda-modes it is possible to input unicode
 symbols. This can be done by pressing `\` (backslash) and then
 entering the code for the desired character (e.g., as exhaustively
 listed
@@ -150,7 +153,7 @@ For example, to get a blackboard N (which in Agda stands for the type
 of natural numbers) you would enter `\bN`; and to get a unicode right
 arrow (which is used for the function type in Agda), you would enter `\to`.
 
-**Note 2:** If you happen to be using VS Code with a Slovene keyboard
+**Note 3:** If you happen to be using VS Code with a Slovene keyboard
 layout (or other similar where getting `\` requires a multi-key
 combination to be pressed down), the agda-mode might not correctly
 recognise `\` as pressed. This can be remedied by editing VS Code's
@@ -160,16 +163,47 @@ these problems with such keyboard layouts.
 
 # Getting the course materials
 
-To get these course materials, you should
+To get your copy of these course materials to work on the exercises,
+you should first
 [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 this repository under your GitHub account and then
 [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
-the forked repository to your computer to work on the exercises
-(before cloning your fork, see also the comments
-[below](#getting-a-local-copy-of-agdas-standard-library) about
-obtaining a local copy of the Agda standard library).
+the forked repository to your computer.
 
-**Note:** As a best practice, we suggest that you develop your
+The course exercises will make use of the Agda standard library
+(version 1.7.1). In order to automatically download a local copy of it
+to the `agda-stdlib` directory, you need to initialise and update the
+corresponding `agda-stdlib` Git
+[submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) in
+your local clone of the fork. This is easiest to do at the time of
+cloning your fork of the repository:
+
+- using the `--recurse-submodules` option when interacting with Git
+  from the command line, e.g., as follows
+
+  ```
+  git clone --recurse-submodules git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+  ```
+
+  when accessing the fork through HTTPS, or
+
+  ```
+  git clone --recurse-submodules git@github.com:YOUR-USERNAME/YOUR-REPOSITORY
+  ```
+
+  when accessing the fork through SSH; or 
+
+- using the `> Git: Clone Recursively` command when interacting with
+  Git from inside VS Code
+
+If you cloned your fork without recursing on submodules, you can
+initialise and update the `agda-stdlib` Git submodule afterwards
+manually following these
+[instructions](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+
+## Working in a Git branch different from `main`
+
+As a best practice, we suggest that you develop your
 solutions to the exercises in a branch different from your fork's
 `main` branch. To this end, after cloning your fork to your computer,
 you can create a new branch based on the `main` branch and switch to
@@ -177,6 +211,7 @@ using it by running the following commands (when using Git from the
 command line):
 
 ```
+git checkout main
 git branch your_branch_name
 git checkout your_branch_name
 git push -u origin HEAD
@@ -189,26 +224,6 @@ and
 [these](https://www.atlassian.com/git/tutorials/using-branches/git-merge)
 instructions for basic information about creating, merging, and
 managing Git branches.
-
-
-## Getting a local copy of Agda's standard library
-
-In order to automatically also download a local copy of Agda's
-standard library (v.1.7.1) to the `agda-stdlib` directory, you need
-to initialise and update the corresponding `agda-stdlib` Git
-[submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
-This is easiest to do at the time of cloning your fork of the
-repository:
-
-- using the `--recurse-submodules` option when interacting with Git
-  from the command line, e.g., as follows
-
-  ```
-  git clone --recurse-submodules git@github.com:yourusername/lograc-2022.git
-  ```
-
-- using the `> Git: Clone Recursively` command when interacting with
-  Git from inside VS Code
 
 ## Keeping your fork up to date with the course repository
 
