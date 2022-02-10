@@ -48,7 +48,7 @@ external libraries (if nessary for your project).
 
 If your computer architecture and operating system are supported, then
 the simplest way to obtain Agda is via one of the
-[pre-built binaries](https://agda.readthedocs.io/en/latest/getting-started/installation.html#prebuilt-packages-and-system-specific-instructions).
+[pre-built binaries](https://agda.readthedocs.io/en/v2.6.2.1/getting-started/installation.html#prebuilt-packages-and-system-specific-instructions).
 
 **Note:** If using a pre-built binary, make sure that the version of
 Agda that you get is either 2.6.2 or 2.6.2.1, i.e., the newest
@@ -86,7 +86,7 @@ separately installed Agda on your computer, see the next sections.
 ## Installing Agda using Cabal (the Agda user manual method)
 
 The Agda user manual has
-[instructions](https://agda.readthedocs.io/en/latest/getting-started/installation.html#using-cabal)
+[instructions](https://agda.readthedocs.io/en/v2.6.2.1/getting-started/installation.html#using-cabal)
 how to install Agda using Cabal (a package manager for Haskell).
 
 A simple way to get Cabal and all the prerequisites listed in the
@@ -121,7 +121,7 @@ preferred ways of doing this is by using either
   [agda-mode](https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode)
   extension, or
 - [Emacs](https://www.gnu.org/software/emacs/) its
-  [agda-mode](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html)
+  [agda-mode](https://agda.readthedocs.io/en/v2.6.2.1/tools/emacs-mode.html)
   plugin
 
 The agda-modes for both of these code editors are roughly equal in the
