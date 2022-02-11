@@ -27,6 +27,14 @@ one of the methods described [below](#installing-agda), make sure you
 install Agda version 2.6.2 or 2.6.2.1 (the newest available at the
 time of writing these instructions).
 
+# Useful links
+
+- Course website: https://ucilnica.fmf.uni-lj.si/course/view.php?id=252
+- Course timetable: https://urnik.fmf.uni-lj.si/predmet/815/
+- Course textbook: https://plfa.github.io
+- Agda language: https://wiki.portal.chalmers.se/agda/pmwiki.php
+- Agda user manual: https://agda.readthedocs.io/en/v2.6.2.1/
+
 # Installing Agda
 
 There is a multitude of ways of obtaining and installing
@@ -124,7 +132,6 @@ If you just want to try out Agda, or if the above installation methods
 fail for you before Week 1 exercises, then you can temporarily use
 Agda also in your browser using [Agda Pad](https://agdapad.quasicoherent.io)
 while we figure out how to get Agda working locally on your own computer.
-
 
 # Interacting with Agda
 
