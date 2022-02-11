@@ -251,6 +251,11 @@ initialise and update the `agda-stdlib` Git submodule afterwards
 manually following these
 [instructions](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
+**Note:** If you intend to work on the exercises using the classroom
+computers, we recommend that you perform the the repository
+[forking](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+before coming to the first exercise class to get going quicker.
+
 ## Working in a Git branch different from `main`
 
 As a best practice, we suggest that you develop your
