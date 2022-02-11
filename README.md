@@ -5,15 +5,6 @@ This repository contains the course materials for the course
 (exercises, sample solutions, lecture notes, code, etc). The repository
 will be continuously updated and added to as the course progresses.
 
-**Note:** The code in this repository has been checked to work with
-Agda version 2.6.2 and 2.6.2.1, and Agda standard library
-version 1.7.1. Using an older version of Agda or a different standard
-library version will likely result in errors when typechecking some of
-the exercises and the imported standard library modules. Thus, when
-obtaining Agda using one of the methods described
-[below](#installing-agda), make sure you install Agda version 2.6.2
-or 2.6.2.1.
-
 Below you can find instructions on
 - [How to install Agda](#installing-agda)
 - [How to interact with Agda](#interacting-with-agda)
@@ -21,6 +12,19 @@ Below you can find instructions on
 
 In case of any questions, please contact the course TA or ask for help on
 the course Discord server.
+
+**Note:** The code in this repository has been checked to work with
+Agda version 2.6.2 and 2.6.2.1, and Agda standard library
+version 1.7.1.
+
+Using an older version of Agda or a different version of the standard
+library will likely result in errors when loading/typechecking some of
+the later weeks' exercises and the imported standard library modules
+(week 1 exercises do not use the standard library and should also work
+with slightly older versions of Agda). Thus, when obtaining Agda using
+one of the methods described [below](#installing-agda), make sure you
+install Agda version 2.6.2 or 2.6.2.1 (the newest available at the
+time of writing these instructions).
 
 # Installing Agda
 
@@ -108,9 +112,18 @@ above instructions, from "Install the Haskell Tool Stack" to "Install
 Agda using Stack", but make sure to replace `git checkout v2.6.1.3`
 with `git checkout v2.6.2.1` to install Agda version 2.6.2.1.
 
-You do not need to follow the instructions for installing the standard
-library as this is already packaged with the course materials, as
-explained [below](#getting-the-course-materials).
+To solve the exercises in this course, you do not need to follow the
+instructions for installing the standard library as this is already
+packaged with the course materials, as explained
+[below](#getting-the-course-materials).
+
+## Using Agda in browser (last resort backup option)
+
+If you just want to try out Agda, or if the above installation methods
+fail for you before Week 1 exercises, then you can temporarily use
+Agda also in your browser using [Agda Pad](https://agdapad.quasicoherent.io)
+while we figure out how to get Agda working locally on your own computer.
+
 
 # Interacting with Agda
 
@@ -163,6 +176,30 @@ recognise `\` as pressed. This can be remedied by editing VS Code's
 keyboard shortcuts settings and choosing a new key combination for the
 `Agda: Activate input method` command. On Emacs we have not noticed
 these problems with such keyboard layouts.
+
+# Classroom computers' peculiarities
+
+As noted above, the Agda version installed on the classroom computers
+is unfortunately out of date. This should not pose problems for week 1
+exercises, but will likely cause problems for later weeks' exercises
+and your individual project work. Therefore, as also noted above, we
+recommend you install an up to date version of Agda on your own
+laptop/computer and use that to work on the exercises and your project
+work.
+
+Another peculiarity on the classroom computers is the bad interaction
+of Agda and the way that your user directories (the `U:\` drive) are
+mounted from the network. Namely, if you put the course materials into
+(a subdirectory) of your home directory and try to use Agda on them
+(via VS Code, Emacs, or the command line), you will be greeted with a
+file reading error. A workaround for this is to clone your fork of
+this repository to the local `C:\Temp` directory, work on the exercises
+locally there, and finally making sure to push the changes back to your
+fork before logging out of the computer.
+
+**Importantly, as the name suggests, `C:\Temp` is just a temporary
+local directory, so do not leave any uncommited and unpushed work
+there when logging out of the computer!**
 
 # Getting the course materials
 
@@ -259,4 +296,8 @@ Finally, in order to check that Agda, the standard library, and the
 interactive development environment are set up as intended, open the
 file `exercises/Test.agda` in the editor of your choice (see above)
 and use the `C-c C-l` command to load/typecheck the file.
+
+If you have everything set up correctly, and the file loading and
+typechecking succeeds, the syntax should get colour-highlighted
+and your code editor should display an `All Done` message.
 
