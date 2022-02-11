@@ -8,6 +8,7 @@ will be continuously updated and added to as the course progresses.
 Below you can find instructions on
 - [How to install Agda](#installing-agda)
 - [How to interact with Agda](#interacting-with-agda)
+- [How to deal with the peculiarities of classroom computers](#classroom-computers-peculiarities)
 - [How to get the course materials](#getting-the-course-materials)
 
 In case of any questions, please contact the course TA or ask for help on
@@ -46,7 +47,7 @@ obtaining an up to date version of Agda described below.** This will
 be especially useful in the latter parts of the course so that you
 could work on your project outside of the prescribed exercise class
 times, and so that you could use up to date versions of additional
-external libraries (if nessary for your project).
+external libraries (if necessary for your project).
 
 ## Pre-built binaries for specific platforms
 
@@ -198,7 +199,7 @@ locally there, and finally making sure to push the changes back to your
 fork before logging out of the computer.
 
 **Importantly, as the name suggests, `C:\Temp` is just a temporary
-local directory, so do not leave any uncommited and unpushed work
+local directory, so do not leave any uncommitted and unpushed work
 there when logging out of the computer!**
 
 # Getting the course materials
