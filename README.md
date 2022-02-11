@@ -1,9 +1,10 @@
-# Logika v računalništvu
+# Logika v računalništvu (2022)
 
 This repository contains the course materials for the course
 [Logika v računalništvu](https://ucilnica.fmf.uni-lj.si/course/view.php?id=252)
-(exercises, sample solutions, lecture notes, code, etc). The repository
-will be continuously updated and added to as the course progresses.
+at UL FMF (also known under the name Izbrana poglavja iz računalniške
+matematike, depending on your study programme). The repository will be
+continuously updated and added to as the course progresses.
 
 Below you can find instructions on
 - [How to install Agda](#installing-agda)
@@ -26,7 +27,13 @@ one of the methods described [below](#installing-agda), make sure you
 install Agda version 2.6.2 or 2.6.2.1 (the newest available at the
 time of writing these instructions).
 
-# Some useful links
+## Structure of this repository
+
+- `exercises/`: contains Agda files for the weekly exercise classes
+- `solutions/`: contains sample solutions to the weekly exercises
+- `agda-stdlib/`: local copy of Agda standard library version 1.7.1
+
+## Some useful links
 
 - Course website: https://ucilnica.fmf.uni-lj.si/course/view.php?id=252
 - Course timetable: https://urnik.fmf.uni-lj.si/predmet/815/
@@ -75,8 +82,8 @@ available at the time of writing these instructions. As said above,
 using an older version (which can be common in the case of pre-built
 binaries) will likely lead to errors when typechecking some of the
 Agda code here. For instance, the Windows binary linked in the above
-instructions is for version 2.6.0.1, which is roughly two years old
-and out of date.
+instructions is for Agda version 2.6.0.1, which is roughly two years
+old and out of date.
 
 You can check the version of your Agda installation by running `agda
 --version` from command line.
@@ -98,6 +105,10 @@ time you attempt to typecheck an Agda file.
 **Note:** As the Agda Language Server is a new and experimental feature,
 it can sometimes misbehave on some computers or operating systems (such
 as typechecking an Agda file hanging with a `Loading ...` message).
+
+In particular, the Agda Language Server does not work well on the
+classroom computers---on the classroom computers you should use the
+VS Code's agda-mode using the pre-installed version of Agda.
 
 If you have problems with the Agda Language Server or if you prefer a
 separately installed Agda on your computer, see the next sections.
