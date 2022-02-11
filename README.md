@@ -15,8 +15,7 @@ In case of any questions, please contact the course TA or ask for help on
 the course Discord server.
 
 **Note:** The code in this repository has been checked to work with
-Agda version 2.6.2 and 2.6.2.1, and Agda standard library
-version 1.7.1.
+Agda version 2.6.2 and 2.6.2.1, and Agda standard library version 1.7.1.
 
 Using an older version of Agda or a different version of the standard
 library will likely result in errors when loading/typechecking some of
@@ -27,7 +26,7 @@ one of the methods described [below](#installing-agda), make sure you
 install Agda version 2.6.2 or 2.6.2.1 (the newest available at the
 time of writing these instructions).
 
-# Useful links
+# Some useful links
 
 - Course website: https://ucilnica.fmf.uni-lj.si/course/view.php?id=252
 - Course timetable: https://urnik.fmf.uni-lj.si/predmet/815/
@@ -43,14 +42,21 @@ We list some of the most common and simplest below.
 
 ## Pre-installed Agda in the computer classes
 
-While Agda has been pre-installed on the computers in the computer
-class, the centrally installed version of Agda (v.2.6.0.1) is
-unfortunately **out of date** (very, by roughly two years) with
-respect to the version of Agda standard library (v.1.7.1) we include
-in these course materials.
+At the time of writing these instructions, the pre-installed version
+of Agda (v.2.6.0.1) on the classroom computers is **out of date** (by
+about two years). The classroom computers should get a fresh version
+of Agda (v.2.6.2.1) before the first exercise classes, but be warned.
+As noted above, using an older version of Agda might cause problems in
+the latter parts of the course---week 1 exercises should be fine with
+v.2.6.0.1 because they do not use any modules from the standard library.
 
-**Therefore, we strongly recommend that, if possible, you work on the
-exercises on your own laptop/computer using one of the ways of
+**Note:** Even when the Agda version gets updated on the classroom
+computers, you will still have to cope with some
+[peculiarities](#classroom-computers-peculiarities) because of the bad
+interaction between Agda and network-mounted user home directories.
+
+**In any case, we strongly recommend that, if possible, you work on
+the exercises on your own laptop/computer using one of the ways of
 obtaining an up to date version of Agda described below.** This will
 be especially useful in the latter parts of the course so that you
 could work on your project outside of the prescribed exercise class
@@ -187,13 +193,9 @@ these problems with such keyboard layouts.
 
 # Classroom computers' peculiarities
 
-As noted above, the Agda version installed on the classroom computers
-is unfortunately out of date. This should not pose problems for week 1
-exercises, but will likely cause problems for later weeks' exercises
-and your individual project work. Therefore, as also noted above, we
-recommend you install an up to date version of Agda on your own
-laptop/computer and use that to work on the exercises and your project
-work.
+As noted earlier, the Agda version installed on the classroom
+computers is currently out of date (v.2.6.0.1 vs v.2.6.2.1) but will
+hopefully be updated before the first exercise classes in week 1.
 
 Another peculiarity on the classroom computers is the bad interaction
 of Agda and the way that your user directories (the `U:\` drive) are
@@ -201,9 +203,9 @@ mounted from the network. Namely, if you put the course materials into
 (a subdirectory) of your home directory and try to use Agda on them
 (via VS Code, Emacs, or the command line), you will be greeted with a
 file reading error. A workaround for this is to clone your fork of
-this repository to the local `C:\Temp` directory, work on the exercises
-locally there, and finally making sure to push the changes back to your
-fork before logging out of the computer.
+this repository to the local `C:\Temp` directory, work on the
+exercises locally there, and finally making sure to push the changes
+back to your fork before logging out of the computer.
 
 **Importantly, as the name suggests, `C:\Temp` is just a temporary
 local directory, so do not leave any uncommitted and unpushed work
@@ -211,8 +213,8 @@ there when logging out of the computer!**
 
 # Getting the course materials
 
-To get your copy of these course materials to work on the exercises,
-you should first
+To get your copy of these course materials to start working on the
+exercises, you should first
 [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 this repository under your GitHub account and then
 [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
@@ -230,7 +232,7 @@ cloning your fork of the repository:
   from the command line, e.g., as follows
 
   ```
-  git clone --recurse-submodules git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+  git clone --recurse-submodules https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
   ```
 
   when accessing the fork through HTTPS, or
