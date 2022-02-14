@@ -3,8 +3,8 @@
 This repository contains the course materials for the course
 [Logika v računalništvu](https://ucilnica.fmf.uni-lj.si/course/view.php?id=252)
 at UL FMF (also known under the name Izbrana poglavja iz računalniške
-matematike, depending on your study programme). The repository will be
-continuously updated and added to as the course progresses.
+matematike, depending on your study programme). The repository will
+be continuously updated and added to as the course progresses.
 
 Below you can find instructions on
 - [How to install Agda](#installing-agda)
@@ -30,14 +30,13 @@ time of writing these instructions).
 ## Structure of this repository
 
 - `exercises/`: contains Agda files for the weekly exercise classes
-- `solutions/`: contains sample solutions to the weekly exercises
 - `agda-stdlib/`: local copy of Agda standard library version 1.7.1
 
 ## Some useful links
 
 - Course website: https://ucilnica.fmf.uni-lj.si/course/view.php?id=252
 - Course timetable: https://urnik.fmf.uni-lj.si/predmet/815/
-- Course textbook: https://plfa.github.io
+- Lecture notes: http://www.andrej.com/zapiski/ISRM-LOGRAC-2022/
 - Agda language: https://wiki.portal.chalmers.se/agda/pmwiki.php
 - Agda user manual: https://agda.readthedocs.io/en/v2.6.2.1/
 
@@ -86,7 +85,7 @@ instructions is for Agda version 2.6.0.1, which is roughly two years
 old and out of date.
 
 You can check the version of your Agda installation by running `agda
---version` from command line.
+--version` from the command line.
 
 ## Visual Studio Code and the Agda Language Server
 
@@ -108,10 +107,26 @@ as typechecking an Agda file hanging with a `Loading ...` message).
 
 In particular, the Agda Language Server does not work well on the
 classroom computers---on the classroom computers you should use the
-VS Code's agda-mode using the pre-installed version of Agda.
+VS Code's agda-mode with the pre-installed version of Agda.
 
 If you have problems with the Agda Language Server or if you prefer a
 separately installed Agda on your computer, see the next sections.
+
+## Installing Agda using the Haskell Tool Stack (the PLFA textbook method)
+
+The recommended textbook has
+[instructions](https://plfa.github.io/GettingStarted/#install-agda-using-stack)
+on how to install Agda using the Haskell Tool Stack.
+
+For our course, you need to only follow the first sections of the
+above instructions, from "Install the Haskell Tool Stack" to "Install
+Agda using Stack", but make sure to replace `git checkout v2.6.1.3`
+with `git checkout v2.6.2.1` to install Agda version 2.6.2.1.
+
+To solve the exercises in this course, you do not need to follow the
+instructions for installing the standard library as this is already
+packaged with the course materials, as explained
+[below](#getting-the-course-materials).
 
 ## Installing Agda using Cabal (the Agda user manual method)
 
@@ -126,22 +141,6 @@ above instructions is to first download and install
 In order to ensure you install Agda version 2.6.2.1, replace the
 command `cabal install Agda` with `cabal install Agda-2.6.2.1` in the
 instructions linked above.
-
-## Installing Agda using the Haskell Tool Stack (the course textbook method)
-
-The course textbook has
-[instructions](https://plfa.github.io/GettingStarted/#install-agda-using-stack)
-on how to install Agda using the Haskell Tool Stack.
-
-For our course, you need to only follow the first sections of the
-above instructions, from "Install the Haskell Tool Stack" to "Install
-Agda using Stack", but make sure to replace `git checkout v2.6.1.3`
-with `git checkout v2.6.2.1` to install Agda version 2.6.2.1.
-
-To solve the exercises in this course, you do not need to follow the
-instructions for installing the standard library as this is already
-packaged with the course materials, as explained
-[below](#getting-the-course-materials).
 
 ## Using Agda in browser (last resort backup option)
 
@@ -162,18 +161,16 @@ preferred ways of doing this is by using either
   [agda-mode](https://agda.readthedocs.io/en/v2.6.2.1/tools/emacs-mode.html)
   plugin
 
+MacOS users can also use [Aquamacs](https://aquamacs.org) as a more
+MacOS-specific alternative to the vanialla GNU Emacs editor.
+
 The agda-modes for both of these code editors are roughly equal in the
 features that they support, so which one you will use will come down
 to your personal preference and any prior experience with these
 editors. If you do not have prior experience with Emacs, we recommend
 starting with VS Code as you have likely used it in your past courses.
 
-The classroom computers have both VS Code and Emacs installed. For the
-former code editor you need to manually install the corresponding
-agda-mode extension; the latter has its agda-mode plugin pre-installed.
-However, as noted above, the version of Agda pre-installed on these
-computers is out of date, and thus we recommend that you install
-up to date Agda and the code editor of your choice on your own computer.
+The classroom computers have both VS Code and Emacs installed.
 
 **Note 1:** Most of the interaction with Agda happens via keyboard
 shortcuts. Depending on which editor you chose to use, see the above
@@ -263,18 +260,18 @@ manually following these
 [instructions](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
 **Note:** If you intend to work on the exercises using the classroom
-computers, we recommend that you perform the the repository
+computers, we recommend that you still perform the the repository
 [forking](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 before coming to the first exercise class to get going quicker.
 
 ## Working in a Git branch different from `main`
 
-As a best practice, we suggest that you develop your
-solutions to the exercises in a branch different from your fork's
-`main` branch. To this end, after cloning your fork to your computer,
-you can create a new branch based on the `main` branch and switch to
-using it by running the following commands in the root directory
-of your local clone of the fork (when using Git from the command line):
+As a best practice, we suggest that you develop your solutions to the
+exercises in a branch different from your fork's `main` branch. To
+this end, after cloning your fork to your computer, you can create a
+new branch based on the `main` branch and switch to using it by
+running the following commands in the root directory of your local
+clone of the fork (when using Git from the command line):
 
 ```
 git checkout main
