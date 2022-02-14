@@ -262,7 +262,13 @@ cloning your fork of the repository:
 If you cloned your fork without recursing on submodules, you can
 initialise and update the `agda-stdlib` Git submodule afterwards
 manually following these
-[instructions](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+[instructions](https://git-scm.com/book/en/v2/Git-Tools-Submodules),
+running the following two commands in the root directory of your clone:
+
+```
+git submodule init
+git submodule update
+```
 
 **Note:** If you intend to work on the exercises using the classroom
 computers, we recommend that you still perform the the repository
