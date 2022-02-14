@@ -48,15 +48,16 @@ We list some of the most common and simplest below.
 
 ## Pre-installed Agda in the computer classes
 
-At the time of writing these instructions, the pre-installed version
-of Agda (v.2.6.0.1) on the classroom computers is **out of date** (by
-about two years). The classroom computers should get a fresh version
-of Agda (v.2.6.2.1) before the first exercise classes, but be warned.
-As noted above, using an older version of Agda might cause problems in
-the latter parts of the course---week 1 exercises should be fine with
-v.2.6.0.1 because they do not use any modules from the standard library.
+Until very recently, the version of Agda pre-installed on the
+classroom computers was out of date (v.2.6.0.1; out of date by about
+two years).  The classroom computers should now have an up to date
+version (v.2.6.2.1) installed on them in `C:\Agda\bin\agda.exe`.
 
-**Note:** Even when the Agda version gets updated on the classroom
+In case you have problems or think your computer is not using the most
+recent version of Agda, let the TA know. To see which version of Agda
+is in scope, you can run `agda --version` from the command line.
+
+**Note:** Even with the updated version of Agda on the classroom
 computers, you will still have to cope with some
 [peculiarities](#classroom-computers-peculiarities) because of the bad
 interaction between Agda and network-mounted user home directories.
@@ -114,7 +115,7 @@ separately installed Agda on your computer, see the next sections.
 
 ## Installing Agda using the Haskell Tool Stack (the PLFA textbook method)
 
-The recommended textbook has
+The textbook recommended in the lecture notes has
 [instructions](https://plfa.github.io/GettingStarted/#install-agda-using-stack)
 on how to install Agda using the Haskell Tool Stack.
 
@@ -157,12 +158,12 @@ preferred ways of doing this is by using either
 - [VS Code](https://code.visualstudio.com) and its
   [agda-mode](https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode)
   extension, or
-- [Emacs](https://www.gnu.org/software/emacs/) its
+- [Emacs](https://www.gnu.org/software/emacs/) and its
   [agda-mode](https://agda.readthedocs.io/en/v2.6.2.1/tools/emacs-mode.html)
   plugin
 
 MacOS users can also use [Aquamacs](https://aquamacs.org) as a more
-MacOS-specific alternative to the vanialla GNU Emacs editor.
+MacOS-specific alternative to the vanialla GNU Emacs editor linked above.
 
 The agda-modes for both of these code editors are roughly equal in the
 features that they support, so which one you will use will come down
@@ -170,7 +171,9 @@ to your personal preference and any prior experience with these
 editors. If you do not have prior experience with Emacs, we recommend
 starting with VS Code as you have likely used it in your past courses.
 
-The classroom computers have both VS Code and Emacs installed.
+The classroom computers have both VS Code and Emacs installed. See
+[below](#classroom-computers-peculiarities) for instructions about
+setting the correct location of the Agda binary on classroom computers.
 
 **Note 1:** Most of the interaction with Agda happens via keyboard
 shortcuts. Depending on which editor you chose to use, see the above
@@ -201,19 +204,21 @@ these problems with such keyboard layouts.
 
 # Classroom computers' peculiarities
 
-As noted earlier, the Agda version installed on the classroom
-computers is currently out of date (v.2.6.0.1 vs v.2.6.2.1) but will
-hopefully be updated before the first exercise classes in week 1.
+The first pecularity on the classroom computers is that the agda-mode
+for VS Code might incorrectly determine the location of the Agda
+executable (`agda.exe`). To fix this, open up VS Code's settings,
+enter `agda` in the settings search bar, and set the `Agda Mode ›
+Connection: Agda Path` setting to point to `C:\Agda\bin\agda.exe`.
 
-Another peculiarity on the classroom computers is the bad interaction
-of Agda and the way that your user directories (the `U:\` drive) are
-mounted from the network. Namely, if you put the course materials into
-(a subdirectory) of your home directory and try to use Agda on them
-(via VS Code, Emacs, or the command line), you will be greeted with a
-file reading error. A workaround for this is to clone your fork of
-this repository to the local `C:\Temp` directory, work on the
-exercises locally there, and finally making sure to push the changes
-back to your fork before logging out of the computer.
+The second peculiarity on the classroom computers is the bad
+interaction of Agda and the way that your user directories (the `U:\`
+drive) are mounted from the network. Namely, if you put the course
+materials into (a subdirectory) of your home directory and try to use
+Agda on them (via VS Code, Emacs, or the command line), you will be
+greeted with a file reading error. A workaround for this is to clone
+your fork of this repository to the local `C:\Temp` directory, work on
+the exercises locally there, and finally making sure to push the
+changes back to your fork before logging out of the computer.
 
 **Importantly, as the name suggests, `C:\Temp` is just a temporary
 local directory, so do not leave any uncommitted and unpushed work
