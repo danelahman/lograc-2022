@@ -245,16 +245,8 @@ cloning your fork of the repository:
   from the command line, e.g., as follows
 
   ```
-  git clone --recurse-submodules https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-  ```
-
-  when accessing the fork through HTTPS, or
-
-  ```
   git clone --recurse-submodules git@github.com:YOUR-USERNAME/YOUR-REPOSITORY
   ```
-
-  when accessing the fork through SSH; or 
 
 - using the `> Git: Clone Recursively` command when interacting with
   Git from inside VS Code
@@ -270,10 +262,15 @@ git submodule init
 git submodule update
 ```
 
-**Note:** If you intend to work on the exercises using the classroom
+**Note 1:** If you intend to work on the exercises using the classroom
 computers, we recommend that you still perform the the repository
 [forking](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 before coming to the first exercise class to get going quicker.
+
+**Note 2:** If during repository cloning you get errors mentioning
+`Host key verification failed`, then you likely have not properly set
+up SSH keys on your computer and GitHub. In this case, follow these
+[instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
 ## Working in a Git branch different from `main`
 
