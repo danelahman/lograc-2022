@@ -102,7 +102,7 @@ After enabling the Agda Language Server and restarting VS Code, the
 agda-mode extension will download the Agda Language Server the next
 time you attempt to typecheck an Agda file.
 
-**Note:** As the Agda Language Server is a new and experimental feature,
+**Note 1:** As the Agda Language Server is a new and experimental feature,
 it can sometimes misbehave on some computers or operating systems (such
 as typechecking an Agda file hanging with a `Loading ...` message).
 
@@ -112,6 +112,11 @@ VS Code's agda-mode with the pre-installed version of Agda.
 
 If you have problems with the Agda Language Server or if you prefer a
 separately installed Agda on your computer, see the next sections.
+
+**Note 2:** If you get a `Connection Error: Client Internal Connection Error`
+on Windows, it is likely that your computer is missing some `.dll` files
+needed by the Agda Language Server. See the course Discord server for help
+with this bug (one of your fellow students kindly packaged up the needed files).
 
 ## Installing Agda using the Haskell Tool Stack (the PLFA textbook method)
 
