@@ -129,6 +129,10 @@ above instructions, from "Install the Haskell Tool Stack" to "Install
 Agda using Stack", but make sure to replace `git checkout v2.6.1.3`
 with `git checkout v2.6.2.1` to install Agda version 2.6.2.1.
 
+After checking out Agda `v2.6.2.1`, you will also need to change the version 
+of the `.yaml` file used in the `stack install` step. Specifically, you 
+should run the command `stack install --stack-yaml stack-8.8.4.yaml`.
+
 To solve the exercises in this course, you do not need to follow the
 instructions for installing the standard library as this is already
 packaged with the course materials, as explained
