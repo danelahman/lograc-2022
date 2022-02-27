@@ -102,7 +102,7 @@ After enabling the Agda Language Server and restarting VS Code, the
 agda-mode extension will download the Agda Language Server the next
 time you attempt to typecheck an Agda file.
 
-**Note:** As the Agda Language Server is a new and experimental feature,
+**Note 1:** As the Agda Language Server is a new and experimental feature,
 it can sometimes misbehave on some computers or operating systems (such
 as typechecking an Agda file hanging with a `Loading ...` message).
 
@@ -112,6 +112,11 @@ VS Code's agda-mode with the pre-installed version of Agda.
 
 If you have problems with the Agda Language Server or if you prefer a
 separately installed Agda on your computer, see the next sections.
+
+**Note 2:** If you get a `Connection Error: Client Internal Connection Error`
+on Windows, it is likely that your computer is missing some `.dll` files
+needed by the Agda Language Server. See the course Discord server for help
+with this bug (one of your fellow students kindly packaged up the needed files).
 
 ## Installing Agda using the Haskell Tool Stack (the PLFA textbook method)
 
@@ -123,6 +128,10 @@ For our course, you need to only follow the first sections of the
 above instructions, from "Install the Haskell Tool Stack" to "Install
 Agda using Stack", but make sure to replace `git checkout v2.6.1.3`
 with `git checkout v2.6.2.1` to install Agda version 2.6.2.1.
+
+After checking out Agda `v2.6.2.1`, you will also need to change the version 
+of the `.yaml` file used in the `stack install` step. Specifically, you 
+should run the command `stack install --stack-yaml stack-8.8.4.yaml`.
 
 To solve the exercises in this course, you do not need to follow the
 instructions for installing the standard library as this is already
