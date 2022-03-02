@@ -343,7 +343,7 @@ safe-lookup : {A : Set} → (xs : List A) → Fin (length xs) → A
 safe-lookup (x ∷ xs) zero    = x
 safe-lookup (x ∷ xs) (suc n) = safe-lookup xs n
 
-NoDup' : {DS : DecSet} → List (DSet DS) → Set
+NoDup' : {A : Set} → List A → Set
 NoDup' xs = (i j : Fin (length xs)) → i ≢ j → safe-lookup xs i ≢ safe-lookup xs j
 
 {-
