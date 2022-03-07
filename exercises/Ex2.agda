@@ -101,14 +101,29 @@ postulate
 -}
 
 +-identityʳ : (n : ℕ) → n + zero ≡ n
-+-identityʳ n = {!!}
++-identityʳ zero = refl
++-identityʳ (suc n) = 
+   begin
+      (suc n) + zero
+      ≡⟨⟩
+      suc (n + zero)
+      ≡⟨ cong suc (+-identityʳ n) ⟩
+      suc n
+   ∎
 
 +-identityˡ : (n : ℕ) → zero + n ≡ n
-+-identityˡ n = {!!}
++-identityˡ n = refl
 
 +-suc : (n m : ℕ) → n + (suc m) ≡ suc (n + m)
-+-suc n m = {!!}
-
++-suc zero m = refl
++-suc (suc n) m = 
+   begin
+      suc n + suc m
+      ≡⟨⟩
+      suc (n + (suc m))
+      ≡⟨ cong suc (+-suc n m) ⟩
+      suc (suc (n + m))
+   ∎
 
 ----------------
 -- Exercise 1 --
@@ -141,7 +156,9 @@ data Maybe (A : Set) : Set where
   nothing : Maybe A
 
 lookup : {A : Set} {n : ℕ} → Vec A n → ℕ → Maybe A
-lookup xs i = {!!}
+lookup [] i = nothing
+lookup (x ∷ xs) zero = just x
+lookup (x ∷ xs) (suc i) = lookup xs i
 
 
 ----------------
@@ -179,7 +196,8 @@ lookup-totalᵀ : {n : ℕ}
               → i < n                           -- `i` in `{0,1,...,n-1}`
               → lookup xs i ≡ just ⋆
              
-lookup-totalᵀ xs i p = {!!}
+lookup-totalᵀ (⋆ ∷ xs) zero (s≤s p) = refl 
+lookup-totalᵀ (x ∷ xs) (suc i) (s≤s p) = lookup-totalᵀ xs i p
 
 {-
    Note: In the standard library, `⊤` is defined as a record type. Here
@@ -218,7 +236,8 @@ data Fin : ℕ → Set where
   suc  : {n : ℕ} (i : Fin n) → Fin (suc n)
 
 safe-lookup : {A : Set} {n : ℕ} → Vec A n → Fin n → A
-safe-lookup xs i = {!!}
+safe-lookup (x ∷ xs) zero = x
+safe-lookup (x ∷ xs) (suc i) = safe-lookup xs i
 
 
 ----------------
@@ -238,8 +257,9 @@ safe-lookup xs i = {!!}
    the correct type, the yellow highlighting below will disappear.
 -}
 
-nat-to-fin : {!!}
-nat-to-fin = {!!}
+nat-to-fin : {n : ℕ} → (i : ℕ) → i < n → Fin n
+nat-to-fin zero (s≤s p) = zero
+nat-to-fin (suc i) (s≤s p) = suc (nat-to-fin i p)
 
 lookup-correct : {A : Set} {n : ℕ}
                → (xs : Vec A n)
@@ -247,7 +267,17 @@ lookup-correct : {A : Set} {n : ℕ}
                → (p : i < n)
                → lookup xs i ≡ just (safe-lookup xs (nat-to-fin i p))
 
-lookup-correct x i p = {!!}
+lookup-correct (x ∷ xs) zero (s≤s p) = 
+   begin
+      lookup (x ∷ xs) zero
+      ≡⟨⟩
+      just x
+      ≡⟨⟩
+      just (safe-lookup (x ∷ xs) zero)
+      ≡⟨⟩ 
+      just (safe-lookup (x ∷ xs) (nat-to-fin zero (s≤s p)))
+   ∎
+lookup-correct (x ∷ x₁) (suc i) (s≤s p) = lookup-correct x₁ i p
 
 
 ----------------
@@ -260,7 +290,7 @@ lookup-correct x i p = {!!}
 -}
 
 take-n : {A : Set} {n m : ℕ} → Vec A (n + m) → Vec A n
-take-n xs = {!!}
+take-n xs = {! !}
 
 
 ----------------
@@ -287,7 +317,8 @@ take-n' xs = {!!}
 -}
 
 vec-list : {A : Set} {n : ℕ} → Vec A n → List A
-vec-list xs = {!!}
+vec-list [] = []
+vec-list (x ∷ xs) = x ∷ (vec-list xs)
 
 {-
    Define a function from lists to vectors that is identity on the
@@ -297,8 +328,9 @@ vec-list xs = {!!}
    natural number specifying the length of the returned vector.
 -}
 
-list-vec : {A : Set} → (xs : List A) → Vec A {!!}
-list-vec xs = {!!}
+list-vec : {A : Set} → (xs : List A) → Vec A (length xs)
+list-vec [] = []
+list-vec (x ∷ xs) = x ∷ (list-vec xs)
 
 
 ----------------
@@ -314,7 +346,8 @@ vec-list-length : {A : Set} {n : ℕ}
                 → (xs : Vec A n)
                 → n ≡ length (vec-list xs)
                 
-vec-list-length xs = {!!}
+vec-list-length [] = refl
+vec-list-length (x ∷ xs) = cong suc (vec-list-length xs)
 
 
 ----------------
@@ -344,7 +377,11 @@ Matrix A m n = Vec (Vec A n) m
 -}
 
 _+ᴹ_ : {m n : ℕ} → Matrix ℕ m n → Matrix ℕ m n → Matrix ℕ m n
-xss +ᴹ yss = {!!}
+[] +ᴹ [] = []
+(xss ∷ xss₁) +ᴹ (yss ∷ yss₁) = (xss +ⱽ yss) ∷ (xss₁ +ᴹ yss₁) where
+   _+ⱽ_ : {n : ℕ} → Vec ℕ n → Vec ℕ n → Vec ℕ n
+   [] +ⱽ [] = []
+   (x ∷ a) +ⱽ (y ∷ b) = (x + y) ∷ (a +ⱽ b)
 
 
 -----------------------------
@@ -389,10 +426,15 @@ list-vec-list = {!!}
    in terms of the transpose of the submatrix without the first row.
 -}
 
+fill : {A : Set} {n : ℕ} → A → Vec A n
+fill {n = zero} x = []
+fill {n = suc n} x = x ∷ fill x
+
 transpose : {A : Set} {m n : ℕ} → Matrix A m n → Matrix A n m
-transpose xss = {!!}
+transpose [] = fill []
+transpose (xss ∷ xss₁) = {!   !}
 
-
+{-
 -----------------
 -- Exercise 12 --
 -----------------
@@ -724,3 +766,4 @@ vec-list-vec = {!!}
 -----------------------------------
 -----------------------------------
 
+-} 
