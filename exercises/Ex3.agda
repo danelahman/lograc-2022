@@ -68,7 +68,7 @@ postulate fun-ext : ∀ {a b} → Extensionality a b
 -}
 
 take-n : {A : Set} {n m : ℕ} → Vec A (n + m) → Vec A n
-take-n xs = {!!}
+take-n {A} {n} {m} xs = {!!}
 
 {-
    Now define a function that extracts the first `n` elements from a
@@ -84,7 +84,7 @@ take-n xs = {!!}
 take-n' : {A : Set} {n m : ℕ} → Vec A (m + n) → Vec A n
 take-n' xs = {!!}
 
-
+{-
 ----------------
 -- Exercise 2 --
 ----------------
@@ -462,3 +462,4 @@ open import Data.Nat.Properties
 
 from-bin-≡ : (b : Bin) → from-bin b ≡ from-bin' b
 from-bin-≡ b = {!!}
+-}
