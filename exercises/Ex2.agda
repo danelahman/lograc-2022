@@ -290,7 +290,7 @@ lookup-correct (x ∷ x₁) (suc i) (s≤s p) = lookup-correct x₁ i p
 -}
 
 take-n : {A : Set} {n m : ℕ} → Vec A (n + m) → Vec A n
-take-n xs = {! !}
+take-n xs = {! xs  !}
 
 
 ----------------
