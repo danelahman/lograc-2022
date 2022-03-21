@@ -20,6 +20,19 @@ Possible extensions:
 * perform the construction more generally in a suitably nice category `𝒞`
 * also define algebras for a monad, with examples
 
+### Suggested background reading materials
+
+* Chapter 10 of Category Theory (Awodey)
+  (https://www.andrew.cmu.edu/course/80-413-713/notes/chap10.pdf)
+
+  - Section 10.5 gives an overview of algebras for endofunctors,
+    Lambek's lemma, polynomial functors and existence of their
+    initial algebras
+
+  - to show the existence of the initial algebras of polynomial
+    functors, you can in first instance use the existence of
+    initial algebras in Agda; and later show this existence
+    also via the (co-)continuitiy of polynomial functors)
 
 ## Coalgebras for a functor
 

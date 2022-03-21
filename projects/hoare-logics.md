@@ -33,3 +33,54 @@ Hoare Logic) is the book "Logic in Computer Science" by Huth & Ryan
   definitional interpreter into a shallow (graded or parameterised) monad
   in Agda. A more advanced version of this project will involve you using
   [Agda's categories library](https://github.com/agda/agda-categories).
+
+## Suggested background reading materials
+
+A good general reference for different kinds of logics, their syntax,
+and semantics is the book "Logic in Computer Science" by Huth & Ryan
+([link](https://www.cs.bham.ac.uk/research/projects/lics/)).
+
+A good general reference for different kinds of lambda calculi and
+programming language features is Types and Programming Languages
+(Pierce) (https://www.cis.upenn.edu/~bcpierce/tapl/).
+
+The definitional interpreter part of the project will take the form of
+an interpretation function from well-typed programs into Agda types
+(wrapped in a (parameterised) monad; and into a suitable category, if
+using the categories library). For this, see the lecture notes and
+exercises on the semantics of propositional logic, together with the
+propositions as types correspondence.
+
+### WHILE and Hoare Logic
+
+* Chapter 4 of Logic in Computer Science (Huth & Ryan)
+
+  - overview of program verification in general
+
+  - syntax of the WHILE language
+
+  - syntax of Hoare triples
+
+  - proof calculus / deduction system for Hoare logic
+
+### State, exceptions, IO, and nondeterminism effects/monads
+
+* Notions of Computation and Monads (Moggi)
+  (https://www.cs.cmu.edu/~crary/819-f09/Moggi91.pdf)
+
+  - an overview of different kinds of computational effects and
+    the monads that naturally model them
+
+  - also gives an overview of the basic programming abstractions
+    for effectful programming based on monads
+
+### Parameterised monads
+
+* Parameterised Notions of Computation (Atkey)
+  (https://bentnib.org/paramnotions-jfp.pdf)
+
+  - definition of a notion of parameterised monads
+
+  - useful if you want to state the definitional interpreter and
+    correctness results with respect to an abstract interface of
+    effectful computations

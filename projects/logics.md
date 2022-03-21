@@ -3,12 +3,6 @@
 This file contains 3 projects, depending on which extension X to the
 propositional logic from lectures/exercises you choose.
 
-## Source material
-
-A good general reference for different kinds of logics, their syntax,
-and semantics is the book "Logic in Computer Science" by Huth & Ryan
-([link](https://www.cs.bham.ac.uk/research/projects/lics/)).
-
 ## Goals of the project
 
 * Extend the deeply embedded propositional logic, its semantics, and
@@ -46,3 +40,97 @@ and semantics is the book "Logic in Computer Science" by Huth & Ryan
   semantics and interpretation into shallow Agda types. A more
   advanced version of this project will involve you using [Agda's
   categories library](https://github.com/agda/agda-categories).
+
+## Suggested background reading materials
+
+A good general reference for different kinds of logics, their syntax,
+and semantics is the book "Logic in Computer Science" by Huth & Ryan
+([link](https://www.cs.bham.ac.uk/research/projects/lics/)).
+
+### Predicate logic
+
+* Week 5-6 lecture notes
+
+  - overview of propositional and predicate logics, natural deduction,
+    semantics
+
+  - note: differently from lectures, where structural properties (of
+    weakening, contraction, and exchange) were included as rules in
+    their own right, in this project you will define a natural
+    deduction proof system in which they are admissible
+
+* Chapter 2 of Logic in Computer Science (Huth & Ryan)
+
+  - syntax, proof theory, and semantics of predicate logic
+
+  - note: the natural deduction rules are presented in a graphical
+    style; in the project you will be using the sequent-style used in
+    the lecture notes
+
+* Sections 3.3-3.8 of the Homotopy Type Theory Book (https://homotopytypetheory.org/book/)
+
+  - overview how propositions are characterised in (homotopy) type
+    theory
+
+  - overview how predicate logic formulae are interpreted as types in
+    type theory using the help of propositional truncation to hide the
+    witnesses of disjunctions and existential quantifiers
+
+* Section 4.1 of Categorical Logic and Type Theory (Jacobs)
+
+  - presents in detail the full sequent-style natural deduction system
+    for predicate logic
+
+### Modal logic
+
+* Chapter 5 of Logic in Computer Science (Huth & Ryan)
+
+  - syntax, proof theory, and (Kripke) semantics of modal logics
+
+  - note: the natural deduction rules are presented in a graphical
+    style; in the project you will be using the sequent-style rules
+    similar to the ones used for propositional logic in the lectures
+
+  - note: differently from lectures, where structural properties (of
+    weakening, contraction, and exchange) were included as rules in
+    their own right, in this project you will define a natural
+    deduction proof system in which they are admissible
+
+* Fitch-Style Modal Lambda Calculi (Clouston) (https://arxiv.org/pdf/1710.08326.pdf)
+
+  - Fitch-style natural deduction systems for modal lambda calculi
+
+  - for the project, you will use the propositions as types
+    correspondence to recover a natural deduction system for
+    propositional modal logic(s) (S4 in first instance)
+
+* Chapter 4 of The Proof Theory and Semantics of Intuitionistic Modal
+  Logic (Simpson) (https://era.ed.ac.uk/handle/1842/407)
+
+  - labelled natural deduction system for (intuitionistic) modal logic
+
+  - note: this would be used if for some reason the Fitch-style natural
+    deduction system and its proof rules cause problems
+
+### Temporal logic
+
+* Section 3.2 of Logic in Computer Science (Huth & Ryan)
+
+  - syntax and semantics of LTL
+
+* Constructive linear-time temporal logic: Proof systems and Kripke
+  semantics (Kojima and Igarashi)
+  (https://www.sciencedirect.com/science/article/pii/S0890540111001416)
+
+  - natural deduction system for (intuitionsitic) LTL (using time-tick
+    labels)
+
+  - semantics of LTL
+
+* Natural Deduction Calculus for Linear-Time Temporal Logic (Bolotov et al.)
+  (https://link.springer.com/chapter/10.1007/11853886_7)
+
+  - natural deduction system for (intuitionsitic) LTL (using more
+    abstract labels)
+
+  - semantics of LTL
