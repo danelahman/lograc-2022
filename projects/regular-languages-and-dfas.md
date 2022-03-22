@@ -17,3 +17,8 @@ This file contains a single project.
 * A more advanced version will also prove additional properties of
   regular languages, such as closedness under complementation and
   intersection.
+
+## Suggested background reading material
+
+* Chapters 1-4 of Lecture Notes on Regular Languages and Finite Automata
+  (Fiore) (https://www.cl.cam.ac.uk/teaching/1011/RLFA/LectureNotes.pdf)
