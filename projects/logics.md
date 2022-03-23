@@ -114,9 +114,33 @@ and semantics is the book "Logic in Computer Science" by Huth & Ryan
 
 ### Temporal logic
 
+* Labeled Natural Deduction for Temporal Logics (Volpe)
+  (https://www.math.tecnico.ulisboa.pt/~mvolpe/publications/theses/volpe-phd-thesis.pdf)
+
+  - (this is a good starting point for the project)
+
+  - Section 2.3.4 presents the syntax and semantics of LTL
+  
+  - Section 2.3.4 also presents Hilbert-style axioms of LTL which you should
+    verify both using the semantics, and later also using natural deduction
+    
+  - Section 4.2.4 presents a labelled natural deduction system for LTL
+    (without the until modality)
+  
+  - Section 4.4 gives a proposal how to also incorporate the until modality
+    in the natural deduction system
+
 * Section 3.2 of Logic in Computer Science (Huth & Ryan)
 
   - syntax and semantics of LTL
+
+* Natural Deduction Calculus for Linear-Time Temporal Logic (Bolotov et al.)
+  (https://link.springer.com/chapter/10.1007/11853886_7)
+
+  - natural deduction system for (intuitionsitic) LTL (using abstract
+    labels)
+
+  - semantics of LTL
 
 * Constructive linear-time temporal logic: Proof systems and Kripke
   semantics (Kojima and Igarashi)
@@ -127,10 +151,4 @@ and semantics is the book "Logic in Computer Science" by Huth & Ryan
 
   - semantics of LTL
 
-* Natural Deduction Calculus for Linear-Time Temporal Logic (Bolotov et al.)
-  (https://link.springer.com/chapter/10.1007/11853886_7)
-
-  - natural deduction system for (intuitionsitic) LTL (using more
-    abstract labels)
-
-  - semantics of LTL
+  - considers LTL with only the next modality
