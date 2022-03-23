@@ -66,6 +66,13 @@ logic, together with the propositions as types correspondence.
 
 ### Exceptions and state/nondeterminism
 
+* Modelling environments in call-by-value programming languages (Levy et al)
+  (https://www.sciencedirect.com/science/article/pii/S0890540103000889)
+
+  - presents a refinement of STLC, the fine-grain call-by-value lambda
+    calculus (FGCBV), which makes a clear distinction between values
+    and effectful computations, and which is thus cleaner to work with
+
 * Notions of Computation and Monads (Moggi)
   (https://www.cs.cmu.edu/~crary/819-f09/Moggi91.pdf)
 
@@ -97,6 +104,12 @@ logic, together with the propositions as types correspondence.
 * Sections 14 and 15 of https://www.cs.bham.ac.uk/~udr/popl/04-19-TLC.pdf
 
   - an overview of the fixpoint and recursion constructs
+
+* Modelling environments in call-by-value programming languages (Levy et al)
+  (https://www.sciencedirect.com/science/article/pii/S0890540103000889)
+  
+  - similarly to the exceptions/state/nondeterminism effects above, it
+    is cleaner to work with FGCBV in the presence general recursion
 
 * Section 3 of The Delay Monad and Restriction Categories (Uustalu,
   Veltri) (https://pure.itu.dk/ws/files/82292987/ictac17_revised.pdf)
