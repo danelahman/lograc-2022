@@ -15,7 +15,17 @@ This file contains 5 projects, depending on which feature X you choose.
   5. natural numbers and primitive recursion, and
      also general recursion (using the delay monad for the latter)
 
-* Define the equational theory for STLC + X. This can take the form
+* If you choose X that involves computational effects (2, 3, 4, 5),
+  then it will be cleaner to work in the fine-grained call-by-value
+  lambda calculus (FGCBV) instead of directly in STLC. A good overview
+  of FGCBV can be found in the article "Linearly-used state in models
+  of call-by-value" by Møgelberg and Staton
+  (http://www.cs.ox.ac.uk/people/samuel.staton/papers/calco11.pdf).
+
+* If you choose X that involves algebraic data type definitions, then
+  it is cleaner if type definitions form another layer around STLC.
+
+* Define the equational theory for STLC/FGCBV + X. This can take the form
   of a small-step operational semantics (i.e., directed equations).
 
 * Prove that the definitional interpreter is sound (that it validates
@@ -65,14 +75,6 @@ logic, together with the propositions as types correspondence.
     inductive types)
 
 ### Exceptions and state/nondeterminism
-
-* Linearly-used state in models of call-by-value (Møgelberg and Staton)
-  (http://www.cs.ox.ac.uk/people/samuel.staton/papers/calco11.pdf)
-
-  - Section 2 gives an overview of a refinement of STLC, the
-    fine-grained call-by-value lambda calculus (FGCBV), which makes a
-    clear distinction between values and effectful computations, and
-    which is thus cleaner to work with in the presence of effects
 
 * Notions of Computation and Monads (Moggi)
   (https://www.cs.cmu.edu/~crary/819-f09/Moggi91.pdf)
