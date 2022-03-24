@@ -31,10 +31,10 @@ propositional logic from lectures/exercises you choose.
        and the propositions-as-types correspondence, together with
        the book "Logic in Computer Science" by Huth & Ryan
 
-    - note: differently from lectures, where structural properties (of
-      weakening, contraction, and exchange) were included as rules in
-      their own right, in this project you will define a natural
-      deduction proof system in which they are admissible
+     - note: differently from lectures, where structural properties (of
+       weakening, contraction, and exchange) were included as rules in
+       their own right, in this project you will define a natural
+       deduction proof system in which they are admissible
 
   2. propositional **modal logic S4** with necessity (box) and
      possibility (diamond) modalities; in detail, this means:
@@ -66,10 +66,10 @@ propositional logic from lectures/exercises you choose.
        - the Kripke semantics for a logic with box and diamond modalities
          can be e.g. found at https://en.wikipedia.org/wiki/Modal_logic
 
-    - note: differently from lectures, where structural properties (of
-      weakening, contraction, and exchange) were included as rules in
-      their own right, in this project you will define a natural
-      deduction proof system in which they are admissible
+     - note: differently from lectures, where structural properties (of
+       weakening, contraction, and exchange) were included as rules in
+       their own right, in this project you will define a natural
+       deduction proof system in which they are admissible
 
   3. propositional **linear time temporal logic (LTL)** with always,
      next, and until modalities; in detail this means
@@ -102,10 +102,10 @@ propositional logic from lectures/exercises you choose.
        - Section 4.4 shows how to also incorporate the until modality
          in the natural deduction system
 
-    - note: differently from lectures, where structural properties (of
-      weakening, contraction, and exchange) were included as rules in
-      their own right, in this project you will define a natural
-      deduction proof system in which they are admissible
+     - note: differently from lectures, where structural properties (of
+       weakening, contraction, and exchange) were included as rules in
+       their own right, in this project you will define a natural
+       deduction proof system in which they are admissible
   
 * A simpler variant of this project will involve defining the
   semantics and interpretation into shallow Agda types. A more
