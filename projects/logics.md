@@ -10,31 +10,102 @@ propositional logic from lectures/exercises you choose.
 
 * Extensions X you can choose from (you can of course suggest your own):
 
-  1. **predicate logic** over natural numbers (in detail, this means
-     adding universal and existential quantifiers over natural number
-     variables to the logic; natural number typed terms; and an
-     equality predicate between natural number typed terms)
+  1. **predicate logic** over natural numbers; in detail this means
 
-  2. propositional **modal logic(s)** with necessity (box) and possibility
-     (diamond) modalities (in detail, this means extending the logic with 
-     modalities; and adapting the natural deduction proof system accordingly,
-     e.g., by following [this PhD thesis](https://era.ed.ac.uk/handle/1842/407)
-     or by following [this article](https://arxiv.org/abs/1710.08326))
+     - extending the propositional logic from the class with (i) natural
+       number typed terms, (ii) quantifiers over natural number typed
+       variables, (iii) an equality predicate between natural number
+       typed terms
 
-  3. **linear time temporal logic** (in detail, this means extending the
-     logic with modalities of temporal logic; and adapting the natural
-     the natural deduction proof system accordingly, e.g., by following
-     [this article](https://link.springer.com/chapter/10.1007/11853886_7))
+     - giving the resulting logic a semantics in terms of subsets of 
+       natural number typed environments
 
-* If you choose (1), then you will also show how to express the Peano
-  axioms in the deeply embedded logic, together with showing how to
-  use them to prove properties of natural number computations.
+     - validating in Agda that the semantics models Peano axioms
 
-* If you choose (2) or (3), then you will instead show how to derive
-  various modal or temporal tautologies in the deeply embedded logic,
-  and relate validity of various other principles to properties of
-  the corresponding semantics. You will also use the deeply embedded
-  logic to specify computational system(s) and prove their properties.
+     - adapting the natural deduction proof system to account for the
+       quantifiers and the equality predicate
+
+     - giving proofs in the natural deduction system of Peano axioms
+
+     - a good starting point is the lecture notes on predicate logic
+       and the propositions-as-types correspondence, together with
+       the book "Logic in Computer Science" by Huth & Ryan
+
+    - note: differently from lectures, where structural properties (of
+      weakening, contraction, and exchange) were included as rules in
+      their own right, in this project you will define a natural
+      deduction proof system in which they are admissible
+
+  2. propositional **modal logic S4** with necessity (box) and
+     possibility (diamond) modalities; in detail, this means:
+
+     - extending propositional logic from the class with modalities
+
+     - giving the resulting logic a Kripke semantics (instead of the
+       boolean semantics we gave to propositional logic in the class)
+
+     - validating in Agda that the Kripke semantics models well-known
+       tautologies of S4
+
+     - adapting the natural deduction proof system to account for the
+       modalities
+
+     - giving proofs in the natural deduction system of the well-known
+       tautologies of S4
+
+     - a good starting point is the article
+       "On an Intuitionistic Modal Logic" by Bierman and de Paiva
+       (https://link.springer.com/article/10.1023/A:1005291931660)
+
+       - Section 2 presents the syntax of intuitionistic modal logic S4
+
+       - Section 2 presents a list of tautologies of S4
+
+       - Section 4 presents a natural deduction proof system for S4
+
+       - the Kripke semantics for a logic with box and diamond modalities
+         can be e.g. found at https://en.wikipedia.org/wiki/Modal_logic
+
+    - note: differently from lectures, where structural properties (of
+      weakening, contraction, and exchange) were included as rules in
+      their own right, in this project you will define a natural
+      deduction proof system in which they are admissible
+
+  3. propositional **linear time temporal logic (LTL)** with always,
+     next, and until modalities; in detail this means
+
+     - extending propositional logic from the class with modalities
+
+     - giving the resulting logic a Kripke semantics (instead of the
+       boolean semantics we gave to propositional logic in the class)
+
+     - validating in Agda that the Kripke semantics models well-known
+       tautologies of LTL
+
+     - adapting the natural deduction proof system to account for the
+       modalities
+
+     - giving proofs in the natural deduction system of the well-known
+       tautologies of LTL
+
+     - a good starting point is the PhD thesis "Labeled Natural
+       Deduction for Temporal Logics" of Volpe
+       (https://www.math.tecnico.ulisboa.pt/~mvolpe/publications/theses/volpe-phd-thesis.pdf)
+
+       - Section 2.3.4 presents the syntax and semantics of LTL
+  
+       - Section 2.3.4 also presents axioms/tautologies of LTL
+    
+       - Section 4.2.4 presents a labelled natural deduction system
+         for LTL (without the until modality)
+  
+       - Section 4.4 shows how to also incorporate the until modality
+         in the natural deduction system
+
+    - note: differently from lectures, where structural properties (of
+      weakening, contraction, and exchange) were included as rules in
+      their own right, in this project you will define a natural
+      deduction proof system in which they are admissible
   
 * A simpler variant of this project will involve defining the
   semantics and interpretation into shallow Agda types. A more
@@ -53,11 +124,6 @@ and semantics is the book "Logic in Computer Science" by Huth & Ryan
 
   - overview of propositional and predicate logics, natural deduction,
     semantics
-
-  - note: differently from lectures, where structural properties (of
-    weakening, contraction, and exchange) were included as rules in
-    their own right, in this project you will define a natural
-    deduction proof system in which they are admissible
 
 * Chapter 2 of Logic in Computer Science (Huth & Ryan)
 
@@ -81,7 +147,7 @@ and semantics is the book "Logic in Computer Science" by Huth & Ryan
   - presents in detail the full sequent-style natural deduction system
     for predicate logic
 
-### Modal logic
+### Modal logic (S4)
 
 * Chapter 5 of Logic in Computer Science (Huth & Ryan)
 
@@ -96,39 +162,15 @@ and semantics is the book "Logic in Computer Science" by Huth & Ryan
     their own right, in this project you will define a natural
     deduction proof system in which they are admissible
 
-* Fitch-Style Modal Lambda Calculi (Clouston) (https://arxiv.org/pdf/1710.08326.pdf)
-
-  - Fitch-style natural deduction systems for modal lambda calculi
-
-  - for the project, you will use the propositions as types
-    correspondence to recover a natural deduction system for
-    propositional modal logic(s) (S4 in first instance)
-
 * Chapter 4 of The Proof Theory and Semantics of Intuitionistic Modal
   Logic (Simpson) (https://era.ed.ac.uk/handle/1842/407)
 
   - labelled natural deduction system for (intuitionistic) modal logic
 
-  - note: this would be used if for some reason the Fitch-style natural
-    deduction system and its proof rules cause problems
+  - note: this would be used if for some reason the Bierman-de Paiva
+    style deduction system and its proof rules cause problems
 
 ### Temporal logic
-
-* Labeled Natural Deduction for Temporal Logics (Volpe)
-  (https://www.math.tecnico.ulisboa.pt/~mvolpe/publications/theses/volpe-phd-thesis.pdf)
-
-  - (this is a good starting point for the project)
-
-  - Section 2.3.4 presents the syntax and semantics of LTL
-  
-  - Section 2.3.4 also presents Hilbert-style axioms of LTL which you should
-    verify both using the semantics, and later also using natural deduction
-    
-  - Section 4.2.4 presents a labelled natural deduction system for LTL
-    (without the until modality)
-  
-  - Section 4.4 gives a proposal how to also incorporate the until modality
-    in the natural deduction system
 
 * Section 3.2 of Logic in Computer Science (Huth & Ryan)
 
