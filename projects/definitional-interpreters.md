@@ -22,8 +22,12 @@ This file contains 5 projects, depending on which feature X you choose.
   of call-by-value" by Møgelberg and Staton
   (http://www.cs.ox.ac.uk/people/samuel.staton/papers/calco11.pdf).
 
-* If you choose X that involves algebraic data type definitions, then
+* If you choose X that involves algebraic data type definitions (1), then
   it is cleaner if type definitions form another layer around STLC.
+
+  - Of course, to begin with, you should just add sum types to STLC, 
+    do the other tasks mentioned here, and only then extend everything
+    with algebraic data type definitions.
 
 * Define the equational theory for STLC/FGCBV + X. This can take the form
   of a small-step operational semantics (i.e., directed equations).
