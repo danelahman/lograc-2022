@@ -34,3 +34,6 @@ Based on the article:
   This generalises from the lectures/exercises where for simplicity
   we were using shallow encodings of category-theoretic notions
   in Agda (e.g., object map of monad being of type `Set -> Set`).
+
+  - for simplicity, you can work in the category of sets defined in
+    `Categories.Category.Instance.Sets` in the categories library

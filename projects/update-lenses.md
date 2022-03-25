@@ -33,4 +33,7 @@ Based on the article:
 
 * Parts of the formalisation that involve category theory should be
   formalised using
-  [Agda's categories library](https://github.com/agda/agda-categories).
+  [Agda's categories library](https://github.com/agda/agda-categories):
+
+  - for simplicity, you can work in the category of sets defined in
+    `Categories.Category.Instance.Sets` in the categories library
