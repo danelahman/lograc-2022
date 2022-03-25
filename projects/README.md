@@ -19,6 +19,18 @@ Of course, let the course organisers know if you have a topic in mind
 you would like to formalise in Agda that is not among the ones we have
 listed below.
 
+## Skeleton GitHub repository for the student projets
+
+In case it helps, we have created a
+[skeleton GitHub repository](https://github.com/danelahman/lograc-project-2022)
+that you can fork and clone. It comes with the appropriate versions of
+the Agda standard library and the Agda categories library as git
+submodules (so remember to use the `--recurse-submodules` option when
+cloning your fork of the repository).
+
+Of course, if you prefer, you are also free to set up your own GitHub
+repository for the project.
+
 ## Project topics
 
 * Logic
