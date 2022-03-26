@@ -6,6 +6,12 @@ This file contains 5 projects, depending on which feature X you choose.
 
 * Define a (monadic) definitional interpreter for the simply typed
   lambda calculus (STLC) extended with feature(s) X.
+  
+  - See week 6 lecture notes and the video for a tutorial overview
+    of the simply typed lambda calculus.
+    
+  - The starting point should be STLC with a base type, unit type, 
+    product type, and function type.
 
 * Features X you can choose from (you can also suggest your own):
   1. sum types and algebraic data types
@@ -21,19 +27,60 @@ This file contains 5 projects, depending on which feature X you choose.
   of FGCBV can be found in the article "Linearly-used state in models
   of call-by-value" by Møgelberg and Staton
   (http://www.cs.ox.ac.uk/people/samuel.staton/papers/calco11.pdf).
+  
+  - This means that there are two kinds of terms, 
+  
+    - values `Gamma |- V : A`
+    - computations/producers `Gamma |- M : A`
+
+  - Depending on X , you will extend computations/producesrs with
+    additional operations:
+    
+    - for exceptions, one operation `raise_e` (where `e` is some 
+      exception name, e.g., from an assumed type/set `Exc`)
+
+    - for state, two operations `get (x.M)` and `put V M`, where
+      `get` binds a variable of a base type of state values, and
+      where `put` takes as argument a value `V` of this base type
+      
+    - for nondeterminism, one operation `M or N`
+    
+    - for general recursion, a computation `let rec f x = M in N`
 
 * If you choose X that involves algebraic data type definitions (1), then
   it is cleaner if type definitions form another layer around STLC.
 
-  - Of course, to begin with, you should just add sum types to STLC, 
-    do the other tasks mentioned here, and only then extend everything
+  - Of course, to begin with, you should simply add sum types to STLC, 
+    do the other tasks mentioned below, and only then extend everything
     with algebraic data type definitions.
+    
+  - This means that in the first instance you should just work with 
+    the terms of the simply typed lambda calculus `Gamma |- t : A`
+    when adding the sum types and corresponding terms.
+    
+  - When adding type definitions, you want another level of definitions
+    `Gamma | Delta |- d : A` "around" the simply typed lambda calculus
+    (the construct `run`),  with the programs `d` then being of the form:
+    
+    ```
+      type T1 = C11 t11 | ... | C1n t1n in
+      ...
+      type Tm = Cm1 tm1 | ... | Cmn tmn in
+      
+      run t
+    ```
 
-* Define the equational theory for STLC/FGCBV + X. This can take the form
-  of a small-step operational semantics (i.e., directed equations).
+* Define the equational theory for STLC/FGCBV + X.
 
-* Prove that the definitional interpreter is sound (that it validates
-  the equational theory).
+  - This means defining the interpretation of types `[[A]] : Set`, 
+    together with an interpretation of well-typed terms `Gamma |- t : A`
+    as functions/maps of the form `[[t]] : [[Gamma]] -> [[A]]`.
+
+* Prove that the definitional interpreter is sound.
+
+  - This means that it validates the equational theory, i.e., if 
+    two programs are equal in the equational theory, then their
+    interpretations are equal as functions/maps `[[Gamma]] -> [[A]]`.
 
 * A simpler variant of this project will involve defining the
   definitional interpreter into a shallow monad in Agda. A more
