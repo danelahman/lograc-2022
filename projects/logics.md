@@ -46,7 +46,7 @@ propositional logic from lectures/exercises you choose.
      - validating in Agda that the semantics models Peano axioms
      
        - this means that if `Gamma |- phi` is a Peano axiom, you need 
-         to show that for all `g : Gamma`, `[[phi]](g)` is inhabited
+         to show that for all `g : Gamma`, `proof ([[phi]] g)` is inhabited
 
      - adapting the natural deduction proof system to account for the
        quantifiers and the equality predicate
@@ -84,7 +84,7 @@ propositional logic from lectures/exercises you choose.
        tautologies of S4 (see the reference article below)
        
        - this means that for a given tautology `phi`, you need to
-         show that for all `w`, `[[phi]](w)` is inhabited
+         show that for all `w`, `proof ([[phi]] w)` is inhabited
 
      - adapting the natural deduction proof system to account for the
        modalities (see the reference article below)
@@ -128,7 +128,7 @@ propositional logic from lectures/exercises you choose.
        tautologies of LTL (see the reference material below)
 
        - this means that for a given tautology `phi`, you need to
-         show that for all `n`, `[[phi]](n)` is inhabited
+         show that for all `n`, `proof ([[phi]] n)` is inhabited
 
      - adapting the natural deduction proof system to account for the
        modalities (see the reference material below)
