@@ -70,6 +70,11 @@ This file contains 5 projects, depending on which feature X you choose.
       run t
     ```
 
+  - A simpler version of this extension would parameterise the type system, 
+    equational theory, semantics, and the soundness proof with a scheme for
+    an algebraic data type (list of constructors each specified by a list of
+    ground-typed argument types).
+
 * Define the equational theory for STLC/FGCBV + X.
 
   - This means defining the interpretation of types `[[A]] : Set`, 
