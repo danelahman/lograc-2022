@@ -10,7 +10,8 @@ propositional logic from lectures/exercises you choose.
   
   - as a warm-up exercise, you should take the propositional logic and 
     its semantics from the exercise classes, and change the semantics
-    to be valued in `HProp` (see week 6 lecture notes) instead if `Bool`
+    to be valued in `HProp` instead if `Bool` (see week 6 lecture notes
+    and [HProp.agda](agda/HProp.agda) for explanation of `HProp`)
 
 * Extensions X you can choose from (you can of course suggest your own):
 

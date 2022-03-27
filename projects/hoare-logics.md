@@ -8,6 +8,11 @@ A good general reference for different kinds of logics (including
 Hoare Logic) is the book "Logic in Computer Science" by Huth & Ryan
 ([link](https://www.cs.bham.ac.uk/research/projects/lics/)).
 
+  - as a warm-up exercise, you should take the propositional logic and 
+    its semantics from the exercise classes, and change the semantics
+    to be valued in `HProp` instead if `Bool` (see week 6 lecture notes
+    and [HProp.agda](agda/HProp.agda) for explanation of `HProp`)
+
 ## Goals of the project
 
 * Define a deep embedding of a small imperative programming language
