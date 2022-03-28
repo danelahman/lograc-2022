@@ -11,11 +11,8 @@ book](https://plfa.inf.ed.ac.uk) to include additional features.
 Some of the features you can extend Part 2 of PLFA with are:
 
 * sums (they seem to be advertised in PLFA but not implemented)
-  
-  - a good overview of lambda calculus with sum types can be found in
-    http://www.andrej.com/zapiski/ISRM-LOGRAC-2022/data/lambda-calculus.pdf
-  
-  - another thorough overview of sum types, their typing rules, and
+    
+  - a thorough overview of sum types, their typing rules, and
     corresponding reduction rules can be found in Section 11.9 of
     Types and Programming Languages (Pierce)
     (https://www.cis.upenn.edu/~bcpierce/tapl/)

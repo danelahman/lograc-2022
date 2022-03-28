@@ -110,8 +110,6 @@ logic, together with the propositions as types correspondence.
 * A review of the simply typed λ-calculus (Bauer)
   (http://www.andrej.com/zapiski/ISRM-LOGRAC-2022/data/lambda-calculus.pdf)
 
-  - lambda-calculus with sum types
-
 * Section 11.9 of Types and Programming Languages (Pierce)
   (https://www.cis.upenn.edu/~bcpierce/tapl/)
 
