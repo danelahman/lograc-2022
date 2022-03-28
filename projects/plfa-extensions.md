@@ -12,7 +12,10 @@ Some of the features you can extend Part 2 of PLFA with are:
 
 * sums (they seem to be advertised in PLFA but not implemented)
     
-  - a thorough overview of sum types, their typing rules, and
+  - see week 6 lecture recording for an overview of empty and sum types 
+    in STLC, and together with the corresponding terms and equations
+    
+  - another thorough overview of sum types, their typing rules, and
     corresponding reduction rules can be found in Section 11.9 of
     Types and Programming Languages (Pierce)
     (https://www.cis.upenn.edu/~bcpierce/tapl/)

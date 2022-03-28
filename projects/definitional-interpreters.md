@@ -107,8 +107,8 @@ logic, together with the propositions as types correspondence.
 
 ### Sum and algebraic data types
 
-* A review of the simply typed λ-calculus (Bauer)
-  (http://www.andrej.com/zapiski/ISRM-LOGRAC-2022/data/lambda-calculus.pdf)
+* see week 6 lecture recording for an overview of empty and sum types 
+  in STLC, and together with the corresponding terms and equations
 
 * Section 11.9 of Types and Programming Languages (Pierce)
   (https://www.cis.upenn.edu/~bcpierce/tapl/)
@@ -132,6 +132,9 @@ logic, together with the propositions as types correspondence.
     algebraic types); a possible extension is to then also allow the
     argument types to refer to the type being defined (giving you
     inductive types)
+
+* A review of the simply typed λ-calculus (Bauer)
+  (http://www.andrej.com/zapiski/ISRM-LOGRAC-2022/data/lambda-calculus.pdf)
 
 ### Exceptions and state/nondeterminism
 
