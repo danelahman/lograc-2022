@@ -33,8 +33,8 @@ Hoare Logic) is the book "Logic in Computer Science" by Huth & Ryan
 
   - In the first instance, instead of the general (possibly) divergent
     while-loop combinator `WHILE B DO C`, use a terminating for-loop
-    combinator `FOR i do C` (where you give the number of times to run
-    the for loop as an integer literal/constant `i`).
+    combinator `FOR n do C` (where you give the number of times to run
+    the for loop as an natural number literal/constant `n`).
 
   - Once you have everything working for the terminating variant of
     WHILE (including the bullet points below), then an additional
