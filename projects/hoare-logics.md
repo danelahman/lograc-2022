@@ -32,14 +32,14 @@ Hoare Logic) is the book "Logic in Computer Science" by Huth & Ryan
       for them as well)
 
   - In the first instance, instead of the general (possibly) divergent
-    while loop construct `WHILE B DO C`, use a terminating for loop
-    combinator `FOR E1 to E2 do C` (where you give the lower and upper
-    bounds for the loop index, which is then incremented implicitly).
+    while-loop combinator `WHILE B DO C`, use a terminating for-loop
+    combinator `FOR i do C` (where you give the number of times to run
+    the for loop as an integer literal/constant `i`).
 
   - Once you have everything working for the terminating variant of
     WHILE (including the bullet points below), then an additional
     challenge is to use the delay monad to allow possibly divergent
-    computations (like the general while loop construct).
+    computations (like the general while loop construct above).
 
 * Features X you can choose from (you can of course suggest your own):
 
