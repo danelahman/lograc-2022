@@ -29,8 +29,10 @@ time of writing these instructions).
 
 ## Structure of this repository
 
-- `exercises/`: contains Agda files for the weekly exercise classes
-- `agda-stdlib/`: local copy of Agda standard library version 1.7.1
+- `exercises/`: Agda files for the weekly exercises
+- `solutions/`: sample solutions for the weekly exercises
+- `projects/`: student project descriptions
+- `agda-stdlib/`: Agda standard library version 1.7.1
 
 ## Some useful links
 
